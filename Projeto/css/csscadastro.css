@@ -1,0 +1,83 @@
+
+body {
+    background: linear-gradient(to right, #84df50, #f07f15);
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 5%;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #f3f3f3;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  /* Estilo do formulário de login */
+  form {
+    margin-top: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+
+  }
+  
+  input[type="checkbox"] {
+    margin-right: 5px;
+    user-select: none;
+  }
+  
+  input[type="submit"] {
+    background-color: #F49619;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto; 
+  }
+  
+  
+  input[type="submit"]:hover {
+    background-color: #a7f419;
+  }
+  
+  label[for="continuar"] {
+    display: inline; 
+    margin-left: 5px;
+    user-select: none;
+  }
+  .link {
+    text-align: center;
+  }
+  
+  .link a {
+    color: #F49619;
+    text-decoration: none;
+  }
+  
+  .link a:hover {
+    text-decoration: underline;
+  }
+ 
