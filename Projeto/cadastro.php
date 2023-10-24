@@ -31,7 +31,7 @@ $dados = $stmtc->fetchAll(PDO::FETCH_ASSOC);
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/jquery.mask.js"></script>
     <script type="text/javascript" src="js/mask.js"></script>
-    <link rel="stylesheet" href="css/cadastro.css"></script>
+    <link rel="stylesheet" href="css/csscadastro.css"></script>
 </head>
 
 <body>
@@ -113,7 +113,7 @@ if (isset($_POST['btnSalvar'])) {
 
     if ($stmt->execute()) {
         echo "Cliente cadastrado com sucesso!";
-        header("Location: indexuser.php");
+        header("Location: index.php");
     } else {
         echo "Erro ao cadastrar o cliente";
     }

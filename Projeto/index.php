@@ -49,11 +49,6 @@ $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 </svg>
             </button>
 </div>
-
-<button class="logoff-button">
-    <a href="logout.php">Logoff</a>
-
-</button>
         </div>
         
 
@@ -91,8 +86,8 @@ $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <li>
                 
                 <button class="button2">
-                    <?php if (isset($_SESSION['cod_cli'])) { ?>
-        <a href="perfil.php?id=<?php echo $_SESSION['cod_cli']; ?>">Meu Perfil</a>
+                <?php if (isset($_SESSION['cod_cli'])) { ?>
+        <a href="perfil.php?id=<?php echo $_SESSION['cod_cli']; ?>">Perfil</a>
     <?php } else { ?>
         <a href="login.php">Entre ou cadastre-se</a>
     <?php } ?>
@@ -143,26 +138,31 @@ $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
           }
 
           </script>
-          <div class="product-container">
-    <h2>Produtos</h2>
-    <div class="row">
-        <?php
-        foreach ($produtos as $produto) :
-            ?>
-            <div class="col-sm-4">
-                <div class="card">
-                    <img src="<?php echo $produto['imag_prod']; ?>" alt="Imagem do Produto">
-                    <div class="card-body">
-                        <h5 class="card-title"><?php echo $produto['nome_prod']; ?></h5>
-                        <p class="card-text"><?php echo $produto['descricao']; ?></p>
-                        <p class="card-text">Preço: R$<?php echo number_format($produto['preco_prod'], 2, ',', '.'); ?></p>
-                        <button type="submit" class="button-comprar">COMPRAR</button>
-                    </div>
+          
+</div>
+<footer>
+        <div class="container">
+            <div class="footer-content">
+                </div>
+                <div class="footer-info">
+                    <h3>Contato</h3>
+                    <p>Endereço: Rua das Plantas, 123</p>
+                    <p>Telefone: (11) 1234-5678</p>
+                    <p>Email: contato@naturalis.com</p>
+                </div>
+                <div class="footer-social">
+                    <h3>Redes Sociais</h3>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Twitter</a></li>
+                    </ul>
                 </div>
             </div>
-        <?php endforeach; ?>
-    </div>
-</div>
+        </div>
+    </footer>
+</body>
+</html>
 
       </body>
 

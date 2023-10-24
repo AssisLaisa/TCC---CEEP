@@ -66,12 +66,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <title>Alteração de usuario</title>
-    <link rel="stylesheet" href="css/cssadms.css"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 </head>
 
 <body>
-    <h2>Alteração de úsuario</h2>
+    <h1>Alteração de úsuario</h1>
     <form method="POST">
     
         <div class="form-group">

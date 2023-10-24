@@ -34,11 +34,7 @@ $pdo = conectar();
             <form action="barrapesquisa.php" method="GET" class="search-form">
                 <input type="text" name="q" class="search-box" placeholder="O que você busca?">
                 <button type="submit" class="search-button">
-                <?php if (isset($_SESSION['cod_cli'])) { ?>
-        <a href="perfil.php?id=<?php echo $_SESSION['cod_cli']; ?>">Meu Perfil</a>
-    <?php } else { ?>
-        <a href="login.php">Entre ou cadastre-se</a>
-    <?php } ?>
+                
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                         <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
                     </svg>
@@ -52,10 +48,10 @@ $pdo = conectar();
             </button>
             </div>
 
-            <button class="logoff-button">
+            <div class="logoff-button">
     <a href="logout.php">Logoff</a>
 
-</button>
+    </div>
         </div>
         
 
@@ -75,8 +71,8 @@ $pdo = conectar();
     <nav>
         <ul>
             <li>
-                <button class="button">
-                <a href="catalogo.php">Categorias</a>
+            <button class="button">
+                    <a href="catalogo.php">Tudo</a>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-grid" viewBox="0 0 16 16">
                         <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm-7 7A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z" />
                     </svg>
@@ -93,7 +89,11 @@ $pdo = conectar();
             <li>
                 
                 <button class="button2">
-                <a href="perfil.php">  Perfil  </a>
+                <?php if (isset($_SESSION['cod_cli'])) { ?>
+        <a href="perfil.php?id=<?php echo $_SESSION['cod_cli']; ?>">Perfil</a>
+    <?php } else { ?>
+        <a href="login.php">Entre ou cadastre-se</a>
+    <?php } ?>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-person-circle" viewBox="0 0 16 16">
                         <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
                         <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />

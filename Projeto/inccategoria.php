@@ -18,10 +18,14 @@ $pdo = conectar();
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/jquery.mask.js"></script>
     <script type="text/javascript" src="js/mask.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/cssadms.css"></script>
 </head>
 
 <body>
-    <h2>Cadastro de Categoria</h2>
+    <h1>Cadastro de Categoria</h1>
     <form method="post" enctype="multipart/form-data">
         <div class="form-group">
             <label>Nome</label>
@@ -32,10 +36,8 @@ $pdo = conectar();
             <input type="text" name="descricao" class="form-control col-6" placeholder="Digite a descrição da categoria">
         </div>
         <button type="submit" name="btnSalvar" class="btn btn-primary">Salvar</button>
+        <a href="concategoria.php" class="btn btn-dark">voltar</a>
     </form>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 </body>
 
 </html>

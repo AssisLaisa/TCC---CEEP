@@ -30,11 +30,10 @@ FETCH_OBJ = $re->idcategoria
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="js/bootstrap.js"></script>
     <script src="js/jquery.js"></script>
-    <link rel="stylesheet" href="css/cssadms.css"></script>
 </head>
 
 <body>
-    <h2>Alteração de Categorias</h2>
+    <h1>Alteração de Categorias</h1>
     <form method="POST">
         <div class="form-group">
         <label>Nome da Categoria</label>
