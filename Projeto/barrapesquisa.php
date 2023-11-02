@@ -35,6 +35,7 @@ $resultados = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <script type="text/javascript" src="js/mask.js"></script>
     <link rel="stylesheet" href="css/csshome.css"></script>
     <link rel="stylesheet" href="css/csspesquisa.css"></script>
+    <link rel="stylesheet" href="css/catalogo.css"></script>
 </head>
 
 <body>
@@ -61,8 +62,8 @@ $resultados = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z" />
                 </svg>
             </button>
-</div>
-</div>
+     
+            </div>
 <button class="logoff-button">
 <?php if (isset($_SESSION['cod_cli'])) { ?>
         <a href="logout.php">Logoff</a>
@@ -71,8 +72,8 @@ $resultados = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <?php } ?>
         
     </button>
-        
-
+   
+</div>
     </script>
             <script>
         document.querySelector('.search-button').addEventListener('click', function () {
@@ -90,7 +91,7 @@ $resultados = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <ul>
             <li>
                 <button class="button">
-                <a href="catalogo.php">Categorias</a>
+                <a href="catalogo.php">Tudo</a>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-grid" viewBox="0 0 16 16">
                         <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm-7 7A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z" />
                     </svg>
@@ -108,7 +109,7 @@ $resultados = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 
                 <button class="button2">
                 <?php if (isset($_SESSION['cod_cli'])) { ?>
-        <a href="perfil.php?id=<?php echo $_SESSION['cod_cli']; ?>">Meu Perfil</a>
+        <a href="perfil.php?id=<?php echo $_SESSION['cod_cli']; ?>">Perfil</a>
     <?php } else { ?>
         <a href="login.php">Entre ou cadastre-se</a>
     <?php } ?>
@@ -123,10 +124,9 @@ $resultados = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </header>
    
     <div class="search">
-        <h1>Resultados de Pesquisa</h1>
+        <h1>Resultados da Pesquisa</h1>
         <p>Exibindo resultados para: <?php echo htmlspecialchars($searchTerm); ?></p>
 
-        <!-- Exibir os resultados aqui -->
         <ul>
             <?php
             // Loop através dos resultados da pesquisa e exiba-os como uma lista

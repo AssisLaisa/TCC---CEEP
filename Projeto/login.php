@@ -15,16 +15,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($usuario) {
         $_SESSION['cod_cli'] = $usuario['cod_cli'];
         $_SESSION['email'] = $usuario['email'];
+
         if ($usuario['tipo_cadastro'] === 'A') {
+            // Se o tipo de cadastro for 'A' (administrador), redirecione para a área de administração
             header("Location: admindex.php");
             exit();
         } else {
+            // Senão, redirecione para a área dos clientes
             header("Location: index.php");
             exit();
         }
-    } else {
+
+    }else {
         echo "<p>Usuário ou senha inválidos. Tente novamente.</p>";
-    }
+    };
 }
 ?>
 <!DOCTYPE html>
@@ -45,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <div class="content">
             <div id="login">
-                <form method="post" action="">
+                <form method="post" action="">   
                     <h1>Login</h1>
                     <p>
                         <label for="email">Seu e-mail</label>

@@ -124,4 +124,4 @@ function removeSpecialChars($str) {
             echo "Nenhuma imagem enviada.";
         }
     }
-    
+    <?

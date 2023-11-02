@@ -1,5 +1,5 @@
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Lato', sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -17,7 +17,7 @@ header {
 
 #logo {
   height: 150px;
-				width: 240px;
+				width: 240px; 
         border-radius: 30px;
 			  padding: 10px;
         margin-left: 10px;
@@ -125,8 +125,8 @@ nav a:hover {
   }
 
   .slide img {
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 900px;
+    max-height: 300px;
     border-radius: 40px;
   }
 
@@ -248,6 +248,10 @@ nav a:hover {
         .grid-item:nth-child(4) {
             background-color: #84df50;
         }
+
+        .grid-item:nth-child(5) {
+          background-color: #84df50;
+      }
         
         footer {
           background-color: #25420F;

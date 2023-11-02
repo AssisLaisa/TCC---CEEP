@@ -74,7 +74,7 @@ if ($cliente) {
             </button>
             </div>
             <button class="logoff-button">
-    <a href="logout.php">Logoff</a>
+    <li><a href="logout.php">Logoff</a></li>
 
 </button>
         </div>

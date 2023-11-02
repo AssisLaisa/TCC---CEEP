@@ -104,9 +104,9 @@ $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <body>
         <div class="slider-container">
           <div class="slider">
-            <div class="slide"><img src="img/imagem1.jpg" alt="Slide 1"></div>
-            <div class="slide"><img src="img/imagem2.jpg" alt="Slide 2"></div>
-            <div class="slide"><img src="img/imagem3.jpg" alt="Slide 3"></div>
+            <div class="slide"><img src="img/imgc1.jpg" alt="Slide 1"></div>
+            <div class="slide"><img src="img/imgc1.jpg" alt="Slide 2"></div>
+            <div class="slide"><img src="img/imgc1.jpg" alt="Slide 3"></div>
           </div>
           <div class="slider-controls">
             <button class="prev" onclick="prevSlide()"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">

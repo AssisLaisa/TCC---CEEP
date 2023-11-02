@@ -1,7 +1,22 @@
 
+
+h1 {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+}
+
+p {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+}
+
+ul {
+    font-family: 'Lato', sans-serif;
+    text-align: justify;
+}
     .search {
         
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Lato', sans-serif;
         align-items: center;
         padding: 20px;
         display: grid;
@@ -49,3 +64,4 @@
         font-size: 18px;
         font-weight: bold;
     }
+ 

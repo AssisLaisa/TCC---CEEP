@@ -25,6 +25,7 @@ $rprd = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <script type="text/javascript" src="js/jquery.mask.js"></script>
     <script type="text/javascript" src="js/mask.js"></script>
     <link rel="stylesheet" href="css/csshome.css"></script>
+    <link rel="stylesheet" href="css/barrapesquisa.css"></script>
     <link rel="stylesheet" href="css/catalogo.css"></script>
 </head>
 

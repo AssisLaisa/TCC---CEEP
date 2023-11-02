@@ -3,6 +3,7 @@
 include_once("conexao.php");
 
 $pdo = conectar();
+
 ?>
 
 <!DOCTYPE html>
@@ -117,6 +118,9 @@ $pdo = conectar();
         </div>
         <div class="grid-item">
         <a href="conproduto.php">Consulta de Produto</a>
+        </div>
+        <div class="grid-item">
+        <a href="concidade.php">Consulta de Cidades</a>
         </div>
     </div>
         </div>
